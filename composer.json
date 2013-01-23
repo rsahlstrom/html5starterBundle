@@ -1,0 +1,16 @@
+{
+    "name": "janiv/html5starter",
+    "type": "symfony-bundle",
+    "description": "Striped down HTML5 Boilerplate for Symfony2 with Twig Blocks and jQuery",
+    "keywords": ["html5", "html5starter"],
+    "homepage": "https://github.com/janiv/html5starterBundle",
+    "license": "MIT",
+    "require": {
+        "symfony/framework-bundle": ">=2.0,<2.2-dev",
+        "symfony/twig-bundle": ">=2.0,<2.2-dev"
+    },
+    "autoload": {
+        "psr-0": { "Janiv\\Bundle\\HTML5StarterBundle": "" }
+    },
+    "target-dir": "Janiv/Bundle/HTML5StarterBundle"
+}
