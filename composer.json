@@ -6,7 +6,7 @@
     "homepage": "https://github.com/janiv/html5starterBundle",
     "license": "MIT",
     "require": {
-        "symfony/symfony": "2.2.*"
+        "symfony/symfony": "~2.1"
     },
     "autoload": {
         "psr-0": { "Janiv\\Bundle\\HTML5StarterBundle": "" }

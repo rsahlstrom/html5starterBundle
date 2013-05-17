@@ -4,6 +4,8 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
+        {% block head_js_analytics %}{% endblock %}
+
         <title>{% block head_title %}{% endblock %}</title>
         {% block head_meta %}
             <meta charset="utf-8">
@@ -46,6 +48,9 @@
             {% if google_analytics_id is defined %}
                 <script>
                     var _gaq=[['_setAccount','{{ google_analytics_id }}'],['_trackPageview']];
+                    {% if analytics_domain is defined %}
+                        _gaq.push(['_setDomainName', '{{ analytics_domain }}']);
+                    {% endif %}
                     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
                     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
                     s.parentNode.insertBefore(g,s)}(document,'script'));
