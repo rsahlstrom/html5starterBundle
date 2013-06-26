@@ -9,7 +9,7 @@
         <title>{% block head_title %}{% endblock %}</title>
         {% block head_meta %}
             <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="description" content="{% block head_meta_description %}{% endblock head_meta_description %}">
             <meta name="viewport" content="width=device-width">
         {% endblock %}
@@ -31,17 +31,17 @@
         {% endblock %}
     </head>
     <body {% block body_attributes %}{% endblock %}>
-        {% block chromeframe %}
+        {% block browsehappy %}
             <!--[if lt IE 9]>
-                <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
         {% endblock %}
 
         {% block body %}{% endblock %}
 
         {% block body_js %}
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-            <script>window.jQuery || document.write('<script src="{% javascripts '@JanivHTML5StarterBundle/Resources/public/js/jquery-1.9.1.min.js' %}{{ asset_url }}{% endjavascripts %}"><\/script>')</script>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+            <script>window.jQuery || document.write('<script src="{% javascripts '@JanivHTML5StarterBundle/Resources/public/js/jquery-1.10.1.min.js' %}{{ asset_url }}{% endjavascripts %}"><\/script>')</script>
         {% endblock %}
 
         {% block body_js_analytics %}
