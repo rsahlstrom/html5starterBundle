@@ -24,7 +24,7 @@
 
         {% block head_js %}
             {% javascripts
-                '@JanivHTML5StarterBundle/Resources/public/js/modernizr-2.6.2.min.js'
+                '@JanivHTML5StarterBundle/Resources/public/js/modernizr-2.7.1.min.js'
             %}
                 <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
@@ -40,8 +40,8 @@
         {% block body %}{% endblock %}
 
         {% block body_js %}
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-            <script>window.jQuery || document.write('<script src="{% javascripts '@JanivHTML5StarterBundle/Resources/public/js/jquery-1.10.1.min.js' %}{{ asset_url }}{% endjavascripts %}"><\/script>')</script>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+            <script>window.jQuery || document.write('<script src="{% javascripts '@JanivHTML5StarterBundle/Resources/public/js/jquery-1.11.0.min.js' %}{{ asset_url }}{% endjavascripts %}"><\/script>')</script>
         {% endblock %}
 
         {% block body_js_analytics %}
