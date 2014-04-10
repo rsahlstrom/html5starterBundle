@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+{% block html_opening_tags %}
+    <!--[if lt IE 7]>      <html class="{% block html_lt_ie7_classes %}no-js lt-ie9 lt-ie8 lt-ie7{% endblock %}"> <![endif]-->
+    <!--[if IE 7]>         <html class="{% block html_ie7_classes %}no-js lt-ie9 lt-ie8{% endblock %}"> <![endif]-->
+    <!--[if IE 8]>         <html class="{% block html_ie8_classes %}no-js lt-ie9{% endblock %}"> <![endif]-->
+    <!--[if gt IE 8]><!--> <html class="{% block html_classes %}no-js{% endblock %}"> <!--<![endif]-->
+{% endblock %}
     <head>
         {% block head_js_analytics %}{% endblock %}
 
