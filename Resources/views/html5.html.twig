@@ -5,7 +5,7 @@
     <!--[if IE 8]>         <html class="{% block html_ie8_classes %}no-js lt-ie9{% endblock %}"> <![endif]-->
     <!--[if gt IE 8]><!--> <html class="{% block html_classes %}no-js{% endblock %}"> <!--<![endif]-->
 {% endblock %}
-    <head>
+    <head {% block head_attributes %}{% endblock %}>
         {% block head_js_analytics %}{% endblock %}
 
         <title>{% block head_title %}{% endblock %}</title>
